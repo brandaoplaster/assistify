@@ -5,7 +5,7 @@ defmodule Assistify.MixProject do
     [
       app: :assistify,
       version: "0.1.0",
-      elixir: "~> 1.14",
+      elixir: "~> 1.18.1",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -58,7 +58,11 @@ defmodule Assistify.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:bandit, "~> 1.5"}
+      {:bandit, "~> 1.5"},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.18.0", only: :test},
+      {:sobelow, "~> 0.13.0", only: :dev}
     ]
   end
 
