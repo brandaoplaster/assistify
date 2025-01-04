@@ -15,9 +15,9 @@ defmodule AssistifyWeb.CoreComponents do
   Icons are provided by [heroicons](https://heroicons.com). See `icon/1` for usage.
   """
   use Phoenix.Component
+  use Gettext, backend: AssistifyWeb.Gettext
 
   alias Phoenix.LiveView.JS
-  import AssistifyWeb.Gettext
 
   @doc """
   Renders a modal.
